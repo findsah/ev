@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>Welcome to Electric Vehicles</h1>
+    <p>Here is a plot of the electric vehicle make count:</p>
+    {% if plot_image_str %}
+        <img src="data:image/png;base64,{{ plot_image_str }}" alt="Electric Vehicle Make Count">
+    {% else %}
+        <p>Sorry, the electric vehicle make count plot is not available at the moment. Please try again later.</p>
+    {% endif %}
+{% endblock %}
